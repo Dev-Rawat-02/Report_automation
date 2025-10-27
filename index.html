@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report-Gen - Upload your file. Get a report. Instantly.</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header Navigation Bar -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <svg class="logo-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <polyline points="14,2 14,8 20,8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span class="logo-text">Report-Gen</span>
+                </div>
+                <nav class="nav">
+                    <a href="#" class="nav-link">Home</a>
+                    <a href="#" class="nav-link">Features</a>
+                    <a href="#" class="nav-link">Pricing</a>
+                    <a href="#" class="nav-link">Login</a>
+                    <a href="#" class="nav-link nav-link-signup">Sign Up</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1 class="hero-title">Upload your file. Get a report. Instantly.</h1>
+            <p class="hero-subtitle">Upload your file. Get a report. Instantly.</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Upload and Progress Section -->
+            <div class="upload-section">
+                <div class="upload-card">
+                    <div class="upload-area" id="uploadArea">
+                        <svg class="upload-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <polyline points="7 10 12 15 17 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <line x1="12" y1="15" x2="12" y2="3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <p class="upload-text">Drag &amp; drop files or click to browse.</p>
+                        <p class="upload-subtext">PDF, DOCX, TXT, CSV only</p>
+                        <input type="file" id="fileInput" accept=".pdf,.docx,.txt,.csv" hidden>
+                    </div>
+                    <div class="file-name-display" id="fileNameDisplay"></div>
+                    <button class="btn btn-upload" id="uploadBtn">Upload</button>
+                </div>
+
+                <div class="progress-card">
+                    <div class="progress-circle" id="progressCircle">
+                        <svg class="progress-svg" viewBox="0 0 120 120">
+                            <circle class="progress-bg" cx="60" cy="60" r="50"></circle>
+                            <circle class="progress-bar" cx="60" cy="60" r="50" id="progressBar"></circle>
+                        </svg>
+                        <div class="progress-text" id="progressText">0%</div>
+                    </div>
+                    <button class="btn btn-generate" id="generateBtn">Generate Report</button>
+                </div>
+            </div>
+
+            <!-- History and Testimonials Section -->
+            <div class="bottom-section">
+                <div class="history-card">
+                    <h3 class="card-title">History</h3>
+                    <div class="history-list">
+                        <div class="history-item">
+                            <span class="history-filename">sample-01.pdf</span>
+                            <span class="history-date">Apr 11, 2024</span>
+                        </div>
+                        <div class="history-item">
+                            <span class="history-filename">sample-02.docx</span>
+                            <span class="history-date">Apr 11, 2024</span>
+                        </div>
+                        <div class="history-item">
+                            <span class="history-filename">sample-03.csv</span>
+                            <span class="history-date">Apr 11, 2024</span>
+                        </div>
+                    </div>
+                    <button class="btn btn-secondary">Upload</button>
+                </div>
+
+                <div class="testimonial-card">
+                    <h3 class="card-title">Trusted by Top Companies</h3>
+                    <p class="testimonial-text">Report-Gen has significantly improved our reporting process!</p>
+                    <div class="star-rating">
+                        <svg class="star" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                        <svg class="star" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                        <svg class="star" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                        <svg class="star" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                        <svg class="star" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                    </div>
+                    <div class="company-logos">
+                        <div class="company-logo"></div>
+                        <div class="company-logo"></div>
+                        <div class="company-logo"></div>
+                        <div class="company-logo"></div>
+                        <div class="company-logo"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="submit-section">
+                <button class="btn btn-submit" id="submitBtn">Submit</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-links">
+                <a href="#" class="footer-link">Contact Us</a>
+                <a href="#" class="footer-link">Privacy Policy</a>
+                <a href="#" class="footer-link">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
