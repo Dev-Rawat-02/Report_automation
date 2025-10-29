@@ -1,0 +1,13 @@
+*.env/
+*.venv/
+
+*node_modules/
+*.log
+dist/
+build/
+.DS_Store
+.vscode/
+.idea/
+*.iml
+*.class
+*.jar   
